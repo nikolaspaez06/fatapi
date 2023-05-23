@@ -24,8 +24,7 @@ Este proyecto es un ejemplo de una API RESTful desarrollada con FastAPI que perm
 
 1. Clona este repositorio en tu máquina local:
 
-git clone git@github.com:JSand89/my-movie-app-c9.git
-
+git clone https://github.com/nikolaspaez06/fatapi
 
 2. Navega al directorio del proyecto:
 
