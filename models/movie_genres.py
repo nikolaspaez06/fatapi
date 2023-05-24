@@ -1,16 +1,12 @@
-from sqlalchemy import Column, ForeignKey, Integer
+from sqlalchemy import column, ForeignKey,  Integer
 
-from config import base 
+from config import Base
 
-class movieGenres(base):
+class MovieGenres(Base):
+    
     __tablename__ = "movie_genres"
-
-    id=Column(Integer,primary_key=True)
-    gen_id = Column(Integer,ForeignKey("generes_id"))
-    movie_id = Column(Integer,ForeignKey("movie.id"))
-
-
-
-
-
+    
+    id = column(Integer, primary_key = True )
+    gen_id = column(Integer, ForeignKey("genres.id"))
+    movie_id = column(Integer, ForeignKey("movie.id"))
     
