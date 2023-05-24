@@ -1,4 +1,4 @@
-from sqlalchemy import column
+from sqlalchemy import Column, Integer, String
 
 from config.database import Base
 
@@ -6,6 +6,6 @@ from config.database import Base
 class Generes(Base):
 
     __tablename__ ="genere"
-    id = column(integer,primary_key=true)
+    id = Column(Integer,primary_key=True)
 
-    gen_title = column(string)
+    gen_title = Column(String)
