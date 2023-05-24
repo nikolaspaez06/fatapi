@@ -1,8 +1,8 @@
-from Sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String
 
 from config.database import Base
 
-class Actor(base):
+class Actor(Base):
 
     __tablename__ = "actor"
 
