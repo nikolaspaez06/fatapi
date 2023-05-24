@@ -2,10 +2,9 @@ from sqlalchemy import column, Integer, String
 
 from config.database import Base
 
-class Genres(Base):
+class reviewer(Base):
     
-    __tablename__ = "genres"
+    __tablename__ = "reviewer"
     
     id = column(Integer, primary_key = True)
-    gen_title = column(String) 
-    
+    rev_name = column(String) 
