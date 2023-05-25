@@ -7,4 +7,4 @@ class movieGenres(Base):
 
     id=Column(Integer,primary_key=True)
     gen_id = Column(Integer,ForeignKey("generes_id"))
-    movie_id = Column(Integer,ForeignKey("movie.id"))
+    movi_id = Column(Integer,ForeignKey("movie.id"))

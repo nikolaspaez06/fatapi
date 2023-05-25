@@ -2,7 +2,7 @@ from sqlalchemy import Column, ForeignKey, Integer
 
 from config.database import Base 
 
-class movieDirector(Base):
+class MovieDirector(Base):
     __tablename__ = "movie_director"
 
     id=Column(Integer,primary_key=True)
