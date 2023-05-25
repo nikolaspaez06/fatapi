@@ -5,7 +5,7 @@ from typing import Optional
 class MovieGenres(BaseModel):
    id : Optional[int] = None
    gen_id : int = Field(ge=1, description="id de genero")
-   movie_id :int = Field(ge=1, description="llave foranea de peliculas")
+   mov_id :int = Field(ge=1, description="llave foranea de peliculas")
 
    class Config:
         schemas_extra = {

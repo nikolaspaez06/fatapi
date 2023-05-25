@@ -1,8 +1,8 @@
-from pydactic import BaseModel, Field
+from pydantic import BaseModel, Field
 
 from typing import Optional
 
-class actor(BaseModel):
+class Actor(BaseModel):
     id: Optional[int] = None
     act_fname : str = Field(max_legth=20, min_length=3,description="actors name")
     act_lname : str = Field(max_legth=20, min_length=3,description="actors last name")
@@ -12,10 +12,10 @@ class actor(BaseModel):
     class Config:
         schema_extra = {
             "example":{
-                "id":1
-                "act_fname":"leonardo"
-                "act_lname":"dicaprio"
-                "act_gender":"m"
+                "id":1,
+                "act_fname":"leonardo",
+                "act_lname":"dicaprio",
+                "act_gender":"M"
             }
         }
         
