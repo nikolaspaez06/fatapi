@@ -16,6 +16,7 @@ class Movie(Base):
     release_contry = Column(String)
 
 
+movie_director= relationship("movie_director", back_populates="movie ")
 
 
 
