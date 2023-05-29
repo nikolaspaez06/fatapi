@@ -20,3 +20,14 @@ class GenresService():
         result = self.db.query(GenresModel).filter(GenresModel.id == id). first()
         return result
     
+    def update_genre(self,data):
+        genre = self.db.query(GenresModel).filter(GenresModel.id == data.id). first()
+        genre.gen_title = data.gen_title 
+        self.db.commit()
+        return
+    
+    def delete_genre(self,id:int):
+        self.db.query(GenresModel).filter(GenresModel.id == id).delete()
+        self.db.commit()
+        return
+    
