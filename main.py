@@ -6,9 +6,7 @@ from config.database import engine,Base
 
 from middlewares.error_handler import Errorhandler
 from routers.movie import movie_router
-from routers.genres import genres_router 
-
-
+from routers.genres import genres_router
 
 
 app = FastAPI()
