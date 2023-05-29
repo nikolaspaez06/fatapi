@@ -10,4 +10,3 @@ class Director(Base):
     dir_fname = Column(String(255))
     dir_iname = Column(String(255))
     
-movie_director  = relationship("movie_director", back_populates="director")
