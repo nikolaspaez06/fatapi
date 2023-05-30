@@ -6,5 +6,5 @@ class movieGenres(base):
     __tablename__ = "movie_genres"
 
     id=column(Interger,primary_key=true)
-    gen_id = column(Integer,ForeignKey("generes_id"))
+    gen_id = column(Integer,ForeignKey("generes.id"))
     movie_id = column(Integer,ForeignKey("movie.id"))
