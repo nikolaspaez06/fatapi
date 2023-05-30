@@ -11,7 +11,7 @@ class ReviewerService():
     
     def  create_reviewer(self,reviewer:ReviewerModel):
         new_reviewer = ReviewerModel(
-            rev_name = reviewer.gen_name.upper()
+            rev_name = reviewer.rev_name.upper()
         )
         self.db.add(new_reviewer)
         self.db.commit()
