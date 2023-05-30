@@ -7,8 +7,12 @@ from config.database import engine,Base
 from middlewares.error_handler import Errorhandler
 from routers.movie import movie_router
 from routers.genres import genres_router
+
 from routers.reviewer import reviewer_router
 from routers.rating import rating_router
+from routers.director import director_router
+from routers.movies_director import mov_director_router
+
 
 
 
@@ -22,6 +26,13 @@ app.include_router(genres_router)
 app.include_router(reviewer_router)
 app.include_router(rating_router)
 
+app.include_router(director_router)
+
+app.include_router(mov_director_router)
+
+
+
+
 Base.metadata.create_all(bind=engine)
 
 
@@ -32,4 +43,5 @@ def message():
 @app.get('/hola',tags=['home'])
 def hola():
     return HTMLResponse('<h1>Hola Clase</h1>')
+
 
