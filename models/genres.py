@@ -1,3 +1,4 @@
+
 from sqlalchemy import Column
 
 from config.database import Base
@@ -9,10 +10,5 @@ class Genres(Base)
 
     id= Column(Integer, primary_key=True)
     gen_tittle = Column(string)
-
-
-
-
-
 
 
