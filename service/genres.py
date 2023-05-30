@@ -1,4 +1,5 @@
 from models.genres import Genres as GenresModel
+from schemas.genres import Genres as GenresSchema
 
 class GenresService():
     def __init__(self, db):
@@ -29,5 +30,5 @@ class GenresService():
     def delete_genre(self,id:int):
         self.db.query(GenresModel).filter(GenresModel.id == id).delete()
         self.db.commit()
-        return
+        
     
