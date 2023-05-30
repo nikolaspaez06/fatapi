@@ -2,9 +2,9 @@ from sqlalchemy import Column, ForeignKey,  Integer
 
 from config.database import Base
 
-class rating(Base):
+class Rating(Base):
     
-    __tablename__ = "rating"
+    __tablename__ = "Rating"
     
     id = Column(Integer, primary_key=True )
     mov_id = Column(Integer, ForeignKey("mov.id"))
