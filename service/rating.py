@@ -1,19 +1,20 @@
 from models.rating import Rating as RatingModel
+from schemas.rating import Rating 
 
 class RatingService():
     def __init__(self, db):
         self.db = db
         
     def get_rating(self):
-        result = self.db.query(RatingModel).all()
+        result = self.db.Query(RatingModel).all()
         return result
     
     def  create_rating(self,rating:RatingModel):
         new_rating = RatingModel(
-            mov_id = rating.gen_id,
-            rev_id = rating.gen_id,
-            rev_star = rating.gen_star,
-            num_o_ratings = rating.gen_num_o_ratings
+            mov_id = rating.mov_id,
+            rev_id = rating.rev_id,
+            rev_stars = rating.rev_stars,
+            num_o_ratings = rating.num_o_ratings
         )
         self.db.add(new_rating)
         self.db.commit()
