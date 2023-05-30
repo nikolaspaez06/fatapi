@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field
 
 from typing import Optional
 
-class   Ratings(BaseModel):
+class   Rating(BaseModel):
    id : Optional[int] = None
    mov_id :int = Field(ge=1, description="llave foranea de peliculas")
    rev_id :int = Field(ge=1, description="Llave foranea de reviewer")
