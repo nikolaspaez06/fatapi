@@ -1,11 +1,14 @@
-from sqlalchemy import Column, Integer, String 
+
+from sqlalchemy import Column
 
 from config.database import Base
 
-class Genres(Base):
+
+class Genres(Base)
     
-    __tablename__ = "genres"
-    
-    id = Column(Integer, primary_key=True)
-    gen_title = Column(String) 
-    
+    _tablename_="genres"
+
+    id= Column(Integer, primary_key=True)
+    gen_tittle = Column(string)
+
+
