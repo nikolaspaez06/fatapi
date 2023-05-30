@@ -17,6 +17,7 @@ app.add_middleware(Errorhandler)
 app.include_router(movie_router)
 app.include_router(genres_router)
 
+
 Base.metadata.create_all(bind=engine)
 
 
@@ -27,4 +28,5 @@ def message():
 @app.get('/hola',tags=['home'])
 def hola():
     return HTMLResponse('<h1>Hola Clase</h1>')
+
 
