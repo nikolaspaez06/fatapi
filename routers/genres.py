@@ -59,7 +59,7 @@ def delete_genre(id:int,movie:Genres):
     #todoeliminar
     
 
-        return JSONResponse(content={"message":"genre don't gound", "status_code":404})
+    return JSONResponse(content={"message":"genre don't gound", "status_code":404})
     GenresService(db).update_genre(genres)
     return JSONResponse(content={"message":"genre update successfully", "status_code": 202}, status_code=202)
     
