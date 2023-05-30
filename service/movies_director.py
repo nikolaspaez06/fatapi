@@ -11,7 +11,7 @@ class Mov_Director():
 
     def create_mov_director(self,mov_director: Mov_DirectorModel):
         new_mov_director = Mov_DirectorModel(
-            dir_id = mov_directora.dir_id,
+            dir_id = mov_director.dir_id,
             mov_id = mov_director.mov_id,
         )
         self.db.add(new_mov_director)
