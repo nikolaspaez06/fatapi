@@ -6,7 +6,7 @@ class Mov_Director():
         self.db = db
 
     def get_mov_director(self):
-        result = self.db.Query(Mov_DirectorModel).all()
+        result = self.db.query(Mov_DirectorModel).all()
         return result
 
     def create_mov_director(self,mov_director: Mov_DirectorModel):
@@ -18,18 +18,21 @@ class Mov_Director():
         self.db.commit()
         return
     
-    def get_for_id(self,data: Mov_DirectorModel):
-        result= self.db.Query(Mov_DirectorModel).filter(Mov_DirectorModel.id == id).first()
+    def get_for_id(self, data: Mov_DirectorModel):
+        result = self.db.query(Mov_DirectorModel).filter(Mov_DirectorModel.id == data).first()
         return result
+
+
     
     def update_mov_director(self,data:Mov_DirectorModel):
-        mov_director = self .db.Query(Mov_DirectorModel).filter(Mov_DirectorModel == id).first()
+        mov_director = self .db.query(Mov_DirectorModel).filter(Mov_DirectorModel == id).first()
         mov_director.dir_id = data.dir_id
         mov_director.mov_id = data.mov_id
         self.db.commit()
         return
     
-    def delete_mov_director(self,id:int):
-        self.db.Query(Mov_DirectorModel).filter(Mov_DirectorModel.id == id).delete()
+    def delete_mov_director(self, did: int):
+        mov_director = self.db.query(Mov_DirectorModel).filter(Mov_DirectorModel.id == did).first()
+        self.db.delete(mov_director)
         self.db.commit()
-        
+        return
