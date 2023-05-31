@@ -27,7 +27,7 @@ class MovieService():
         time = movie.time,
         date_release = movie.date_release,
         release_contry = movie.release_contry,
-        mov_director_id = movie.mov_director_id
+        
         )
         self.db.add(new_movie)
         self.db.commit()
