@@ -21,7 +21,7 @@ def get_Movie_Cast():
 def get_Movie_Cast_for_id(id:int):
     db = Session()
     result = Movie_CastService(db).get_for_id(id)
-    return result
+    return JSONResponse(content=jsonable_encoder(result),status_code=200)
    
 
 @Movie_Cast_router.post('/movie_cast', tags=['movie_cast'], status_code=201)

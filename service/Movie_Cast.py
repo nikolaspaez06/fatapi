@@ -13,7 +13,7 @@ class Mov_Cast():
         new_Mov_Cast = Mov_CastModel(
             act_id = Mov_Cast.act_id,
             mov_id = Mov_Cast.mov_id,
-            role = Mov_Cast.role.upper,
+            role = Mov_Cast.role.upper ()
         )
         self.db.add(new_Mov_Cast)
         self.db.commit()
