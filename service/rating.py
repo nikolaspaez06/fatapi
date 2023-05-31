@@ -28,7 +28,7 @@ class RatingService():
         rating = self.db.query(RatingModel).filter(RatingModel.id == data.id). first()
         rating.mov_id = data.mov_id
         rating.rev_id= data.rev_id
-        rating.rev_star =data.rev_star
+        rating.rev_stars =data.rev_stars
         rating.num_o_ratings = data.num_o_ratings   
         self.db.commit()
         return
