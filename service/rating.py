@@ -6,7 +6,7 @@ class RatingService():
         self.db = db
         
     def get_rating(self):
-        result = self.db.Query(RatingModel).all()
+        result = self.db.query(RatingModel).all()
         return result
     
     def  create_rating(self,rating:RatingModel):
