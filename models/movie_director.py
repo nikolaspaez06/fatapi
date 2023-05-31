@@ -10,5 +10,5 @@ class Mov_Director(Base):
     dir_id = Column(Integer,ForeignKey("director.id"))
     mov_id = Column(Integer,ForeignKey("movie.id"))
 
-    director = relationship("Director",back_populates="movies_directors")
-    movie = relationship("Movie",back_populates="movies_directors")
+    director = relationship("Director",back_populates="movies_directors",foreign_keys=[dir_id])
+    movie = relationship("Movie",back_populates="movies_directors",foreign_keys=[mov_id])

@@ -26,9 +26,8 @@ class Mov_Director():
         mov_director.dir_id = data.dir_id
         mov_director.mov_id = data.mov_id
         self.db.commit()
-
-    def delete_mov_director(self, did: int):
-        mov_director = self.db.query(Mov_DirectorModel).filter(Mov_DirectorModel.id == did).first()
-        if mov_director:
-            self.db.delete(mov_director)
-            self.db.commit()
+    
+    def delete_mov_director(self, id: int):
+        self.db.query(Mov_DirectorModel).filter(Mov_DirectorModel.id == id).delete()
+        self.db.commit()
+        return
