@@ -1,17 +1,17 @@
-from models.Mov_Cast import Mov_Cast as Mov_CastModel
-from schemas.Movie_Cast import Mov_Cast
+from models.Movie_Cast import Movie_Cast as Mov_CastModel
+
 
 class Mov_Cast():
     def __init__(self,db):
         self.db = db
 
     def get_Mov_Cast(self):
-        result = self.db.Query(Mov_CastModel).all()
+        result = self.db.query(Mov_CastModel).all()
         return result
 
-    def create_Mov_Cast(self,Mov_Cast: Mov_CastModel):
+    def create_Movie_Cast(self,Mov_Cast: Mov_CastModel):
         new_Mov_Cast = Mov_CastModel(
-            act_id = Mov_Cast.dir_id,
+            act_id = Mov_Cast.act_id,
             mov_id = Mov_Cast.mov_id,
             role = Mov_Cast.role.upper,
         )
@@ -19,18 +19,21 @@ class Mov_Cast():
         self.db.commit()
         return
     
-    def get_for_id(self,data: Mov_CastModel):
-        result= self.db.Query(Mov_CastModel).filter(Mov_CastModel.id == id).first()
+    def get_for_id(self,id:int):
+        result= self.db.query(Mov_CastModel).filter(Mov_CastModel.id == id).first()
         return result
     
-    def update_Mov_Cast(self,data:Mov_CastModel):
-        Mov_Cast = self .db.Query(Mov_CastModel).filter(Mov_CastModel == id).first()
-        Mov_Cast.dir_id = data.act_id
+    def update_Movie_Cast(self,data:Mov_CastModel):
+        Mov_Cast = self.db.query(Mov_CastModel).filter(Mov_CastModel.id == data.id).first()
+        Mov_Cast.act_id = data.act_id
         Mov_Cast.mov_id = data.mov_id
-        Mov_Cast.role=data.Movie_Cast
+        Mov_Cast.role= data.role
         self.db.commit()
         return
+        
     
-    def delete_Mov_Cast(self,id:int):
-        self.db.Query(Mov_Cast or Model).filter(Mov_CastModel.id == id).delete()
+    def delete_Movie_Cast(self,id:int):
+        self.db.query(Mov_CastModel).filter(Mov_CastModel.id == id).delete()
         self.db.commit()
+        
+    

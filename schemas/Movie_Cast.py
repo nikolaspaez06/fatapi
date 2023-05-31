@@ -14,7 +14,7 @@ class   Movie_Cast(BaseModel):
             "example":{
                 "act_id":2,
                 "mov_id":3,
-                "role":"protagonista",
+                "role":"protagonista"
                 
                 
             }

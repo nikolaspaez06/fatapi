@@ -13,7 +13,7 @@ from routers.rating import rating_router
 from routers.director import director_router
 from routers.movies_director import mov_director_router
 from routers.actor import actor_router
-
+from routers.Movie_Cast import Movie_Cast_router
 
 
 app = FastAPI()
@@ -30,7 +30,7 @@ app.include_router(actor_router)
 app.include_router(director_router)
 
 app.include_router(mov_director_router)
-
+app.include_router(Movie_Cast_router)
 
 
 

@@ -18,6 +18,8 @@ class Movie(Base):
 
     movies_directors = relationship("Mov_Director", back_populates="movie", foreign_keys='Mov_Director.mov_id')
 
+    
+
 
 
 
