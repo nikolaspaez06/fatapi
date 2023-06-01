@@ -66,4 +66,14 @@ http://localhost:8000/docs
 
 Si tienes alguna pregunta o sugerencia o quieres el workbook para desarrollar este proyecto, no dudes en contactarme en [jsanchez@educamas.com.co](jsanchez@educamas.com.co).
 
+## Autores
 
+- Diego Felipe Aguirre Ariza
+
+- Santiago Benítez Uran
+
+- bMaribel Rocio Aristizabal Saavedra
+
+- heisenberg huxley diaz lotero
+
+- Sergio Nicolás Paez Duque
